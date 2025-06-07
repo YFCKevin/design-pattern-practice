@@ -1,0 +1,29 @@
+server:
+  port: 7001
+  servlet:
+    contextPath: /course
+  error:
+    whitelabel:
+      enabled: false
+config:
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+  resources:
+    static-locations: file:/Users/chenyifan/Documents/workspace-ubn/course/src/main/resources/static/
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 6MB
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              index: DEBUG

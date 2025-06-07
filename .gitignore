@@ -1,0 +1,60 @@
+# -----------------------
+# General
+# -----------------------
+HELP.md
+/data/
+*.log
+logback.*.0
+
+# -----------------------
+# Gradle
+# -----------------------
+.gradle/
+**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# -----------------------
+# Eclipse / STS
+# -----------------------
+.project
+.classpath
+.apt_generated
+.factorypath
+.settings/
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# -----------------------
+# IntelliJ IDEA
+# -----------------------
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# -----------------------
+# NetBeans
+# -----------------------
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# -----------------------
+# VS Code
+# -----------------------
+.vscode/

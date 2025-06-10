@@ -7,6 +7,7 @@ import com.gurula.course.course.video.VideoRepository;
 import com.gurula.course.exception.Result;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.UUID;
@@ -20,6 +21,7 @@ public class VideoUploadStrategy implements UploadStrategy {
     }
 
     @Override
+    @Transactional
     public Result<String, String> upload(ContentDTO dto) {
         try {
             final MultipartFile file = dto.getFile();

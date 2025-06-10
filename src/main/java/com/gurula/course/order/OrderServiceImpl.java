@@ -27,6 +27,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
+    @Transactional
     public OrderDetail pay(PaymentDTO dto) {
         final Optional<OrderDetail> opt = orderDetailRepository.findById(dto.getOrderDetailId());
         if (opt.isPresent()) {
@@ -40,6 +41,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
+    @Transactional
     public void cancel(String id) {
         final Optional<OrderDetail> opt = orderDetailRepository.findById(id);
         if (opt.isPresent()) {
@@ -51,6 +53,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
+    @Transactional
     public void retryPayment(PaymentDTO dto) {
         final Optional<OrderDetail> opt = orderDetailRepository.findById(dto.getOrderDetailId());
         if (opt.isPresent()) {

@@ -12,12 +12,13 @@ public class WatchEventRecord {
     private String id;
     private String memberId;
     private String courseId;
+    private String lessonId;
     private String courseName;
     private String lessonName;
     private EventType eventType;
     private Long startWatchTime;
     private Long endWatchTime;
-    private Long creationDate;
-    private Double currentTime;
+    private Long createAt;
+    private Double currentWatchTime;
     private Long totalWatchTime;
 }

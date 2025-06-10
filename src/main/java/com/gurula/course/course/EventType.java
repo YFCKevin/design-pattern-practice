@@ -4,5 +4,6 @@ public enum EventType {
     PLAY,
     PAUSE,
     SEEK,
-    END
+    END,
+    ERROR
 }

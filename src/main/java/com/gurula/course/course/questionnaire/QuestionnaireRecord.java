@@ -14,5 +14,5 @@ public class QuestionnaireRecord {
     private String lessonId;
     private String questionnaireId;
     private Long answerDate;
-    private String question;
+    private String answer;
 }

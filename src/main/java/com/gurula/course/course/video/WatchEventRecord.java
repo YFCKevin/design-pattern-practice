@@ -13,6 +13,7 @@ public class WatchEventRecord {
     private String memberId;
     private String courseId;
     private String lessonId;
+    private String contentId;
     private String courseName;
     private String lessonName;
     private EventType eventType;

@@ -30,6 +30,7 @@ public class VideoEventHandler {
         watchRecord.setCourseId(dto.getCourseId());
         watchRecord.setLessonId(dto.getLessonId());
         watchRecord.setMemberId(dto.getMemberId());
+        watchRecord.setContentId(dto.getContentId());
         watchRecord.setWatchTime(dto.getCurrentTime());
         watchRecordRepository.save(watchRecord);
     }
@@ -50,6 +51,7 @@ public class VideoEventHandler {
         watchEventRecord.setCreateAt(System.currentTimeMillis());
         watchEventRecord.setCurrentWatchTime(dto.getCurrentTime());
         watchEventRecord.setTotalWatchTime(dto.getEndWatchTime() - dto.getStartWatchTime());
+        watchEventRecord.setContentId(dto.getContentId());
         watchEventRecordRepository.save(watchEventRecord);
     }
 
@@ -57,6 +59,10 @@ public class VideoEventHandler {
     protected void saveErrorRecord(VideoEventDTO dto) {
         VideoErrorRecord videoErrorRecord = new VideoErrorRecord();
         videoErrorRecord.setErrorMsg(dto.getErrorMsg());
+        videoErrorRecord.setCourseId(dto.getCourseId());
+        videoErrorRecord.setMemberId(dto.getMemberId());
+        videoErrorRecord.setLessonId(dto.getLessonId());
+        videoErrorRecord.setContentId(dto.getContentId());
         videoErrorRecordRepository.save(videoErrorRecord);
     }
 }

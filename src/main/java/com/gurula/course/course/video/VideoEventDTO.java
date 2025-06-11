@@ -9,6 +9,7 @@ public class VideoEventDTO {
     private String memberId;
     private String courseId;
     private String lessonId;
+    private String contentId;
     private long startWatchTime;
     private long endWatchTime;
     private long createAt;

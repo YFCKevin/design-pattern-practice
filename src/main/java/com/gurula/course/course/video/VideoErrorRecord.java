@@ -10,4 +10,8 @@ public class VideoErrorRecord {
     @Id
     private String id;
     private String errorMsg;
+    private String memberId;
+    private String courseId;
+    private String lessonId;
+    private String contentId;
 }

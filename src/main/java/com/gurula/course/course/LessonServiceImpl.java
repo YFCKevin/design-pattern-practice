@@ -1,6 +1,7 @@
 package com.gurula.course.course;
 
 import com.gurula.course.course.dto.LessonDTO;
+import com.gurula.course.discuss.Discuss;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,5 +26,19 @@ public class LessonServiceImpl implements LessonService{
             return lesson;
         }).toList();
         lessonRepository.saveAll(lessonList);
+    }
+
+    @Override
+    public void updateDiscussInfo(Discuss discuss) {
+        final Lesson lesson = lessonRepository.findById(discuss.getLessonId()).get();
+        if (discuss.getDeleteAt() > 0) {
+            lesson.setDiscussCount(lesson.getDiscussCount() - 1);
+        } else if (discuss.getRemoveAt() > 0) {
+            lesson.setDiscussCount(lesson.getDiscussCount() - 1);
+        } else {
+            lesson.setLatestDiscussTime(discuss.getCreateAt());
+            lesson.setDiscussCount(lesson.getDiscussCount() + 1);
+        }
+        lessonRepository.save(lesson);
     }
 }

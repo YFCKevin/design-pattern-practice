@@ -18,4 +18,6 @@ public class Lesson {
     private String contentId;
     private List<String> lessonIds = new ArrayList<>();
     private String parentId;
+    private long latestDiscussTime;
+    private int discussCount;
 }

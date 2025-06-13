@@ -13,4 +13,6 @@ public class LessonDTO {
     private ContentDTO content;
     private List<LessonDTO> lessons = new ArrayList<>();
     private String parentId;
+    private long latestDiscussTime;
+    private int discussCount;
 }

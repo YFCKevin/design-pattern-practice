@@ -6,6 +6,7 @@
 - [Strategy Pattern](#strategy-pattern)
 - [Chain of Responsibility Pattern](#chain-of-responsibility-pattern)
 - [Command Pattern](#command-pattern)
+- [Observer Pattern](#observer-pattern)
 
 ---
 
@@ -79,6 +80,21 @@
   <img src="https://github.com/YFCKevin/design-pattern-practice/blob/main/src/main/resources/static/img/video-command.png" width="100%" alt="Video Command OOD">
 </p>
 
+
+---
+
+## Observer Pattern
+
+**應用場景：討論區系統**
+
+- 使用觀察者模式，當有新影片上傳時，自動通知訂閱該類別的使用者，例如發送 Email 、更新按讚數和修改最新留言時間等等。
+
+### 🧱 OOD 設計圖：
+
+<p align="center">
+  <img src="https://github.com/YFCKevin/design-pattern-practice/blob/main/src/main/resources/static/img/discuss-observer.png" width="100%" alt="Discuss Observer OOD">
+</p>
+
 ---
 
 ## 📌 備註
@@ -92,5 +108,5 @@
 
 預計未來實作以下設計模式：
 
-- [ ] 👁️ **Observer Pattern**（觀察者模式）  
+- [x] 👁️ **Observer Pattern**（觀察者模式）  
 - [ ] 🏭 **Factory Method Pattern**（工廠方法模式）
